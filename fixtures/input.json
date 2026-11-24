@@ -1,0 +1,2 @@
+{"active_current_a":"1","min_phase_seconds":"30","samples":[{"id":"r0","time_s":"0","voltage_v":"3.5","current_a":"2"},{"id":"r1","time_s":"60","voltage_v":"3.8","current_a":"2"},{"id":"r2","time_s":"120","voltage_v":"4.0","current_a":"0"},{"id":"r3","time_s":"180","voltage_v":"3.9","current_a":"-1.5"},{"id":"r4","time_s":"240","voltage_v":"3.6","current_a":"-1.5"}]}
+
