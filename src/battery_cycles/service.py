@@ -53,3 +53,6 @@ def process(data: dict) -> dict:
     efficiency=None if charge==0 else discharge/charge
     return {"phases":output,"charge_wh":_text(charge),"discharge_wh":_text(discharge),"round_trip_efficiency":None if efficiency is None else _text(efficiency)}
 
+
+# Re-exported for callers that address APIs through the historical service module.
+from .cycles import InputError, RunDataError, process_cycles, process_run  # noqa: E402,F401
