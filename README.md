@@ -20,6 +20,12 @@ for run in result["runs"]:
 
     python3 examples/run_cycles.py
 
+## 计量审定与取用凭证（`metrology`）
+
+`MetrologyStore` 与纯函数 `audit_batch` 在循环证据之上提供离线计量审定：以仓库实算的 `charge_wh`/`discharge_wh` 为名义值，按计量通道的增益误差闭区间逐样件精确计算实际 `放电 Wh − T×充电 Wh` 的上下界，并在持久化档案中管理校准版、更正和下游取用凭证。更正只改变当前可取用范围，原始试验与签发档案不可变；凭证一旦因更正失效即永久不可用，区间恢复也不复活旧号。完整约定见 [docs/metrology.md](docs/metrology.md)。
+
+    python3 examples/run_metrology.py
+
 ## 安装与验证
 
 Python 3.11+；运行依赖仅标准库，构建固定 setuptools 80.9.0、wheel 0.45.1。

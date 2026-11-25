@@ -6,6 +6,16 @@ from .cycles import (
     process_cycles,
     process_run,
 )
+from .metrology import (
+    CalibrationError,
+    CredentialError,
+    CredentialNotFoundError,
+    MetrologyInputError,
+    MetrologyStore,
+    VersionNotFoundError,
+    audit_batch,
+    build_evidence_index,
+)
 
 __all__ = [
     "process",
@@ -14,4 +24,12 @@ __all__ = [
     "InputError",
     "InputValidationError",
     "RunDataError",
+    "audit_batch",
+    "build_evidence_index",
+    "MetrologyStore",
+    "MetrologyInputError",
+    "CalibrationError",
+    "CredentialError",
+    "CredentialNotFoundError",
+    "VersionNotFoundError",
 ]
